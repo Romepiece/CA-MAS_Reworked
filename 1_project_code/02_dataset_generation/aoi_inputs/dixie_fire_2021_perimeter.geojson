@@ -1,0 +1,23 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "dixie_fire_bbox"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-121.9, 39.7],
+            [-120.7, 39.7],
+            [-120.7, 40.9],
+            [-121.9, 40.9],
+            [-121.9, 39.7]
+          ]
+        ]
+      }
+    }
+  ]
+}

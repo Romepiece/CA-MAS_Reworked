@@ -1,0 +1,40 @@
+{
+  "gee_project": "my-project-wd-253808",
+  "cases": [
+    {
+      "id": "dixie_fire_2021",
+      "aoi_geojson": "aoi_inputs/dixie_fire_2021_perimeter.geojson",
+      "start_date": "2021-07-01",
+      "end_date": "2021-10-15",
+      "timezone": "America/Los_Angeles"
+    },
+    {
+      "id": "caldor_fire_2021",
+      "aoi_geojson": "aoi_inputs/caldor_fire_2021_request_aoi_test.geojson",
+      "start_date": "2021-08-14",
+      "end_date": "2021-10-25",
+      "timezone": "America/Los_Angeles"
+    }
+  ],
+  "output": {
+    "base_dir": "outputs/02_gee_collect/data_v2",
+    "scale_m": 100,
+    "crs": "EPSG:32610"
+  },
+  "collections": {
+    "burned_mcd64a1": "MODIS/061/MCD64A1",
+    "ndvi": "MODIS/061/MOD13Q1",
+    "dem": "USGS/SRTMGL1_003",
+    "landcover": "ESA/WorldCover/v200",
+    "weather_hourly": "ECMWF/ERA5_LAND/HOURLY",
+    "viirs_active_fire": "FIRMS"
+  },
+  "weather_hourly_bands": [
+    "u_component_of_wind_10m",
+    "v_component_of_wind_10m",
+    "temperature_2m",
+    "dewpoint_temperature_2m",
+    "surface_pressure",
+    "total_precipitation"
+  ]
+}

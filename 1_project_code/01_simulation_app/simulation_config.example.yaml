@@ -1,0 +1,53 @@
+project:
+  name: project_CA+MAS_reworked
+  description: Notebook-to-Python migration target for the original CA+MAS wildfire project
+
+paths:
+  raw_data_dir: outputs/raw
+  interim_data_dir: outputs/interim
+  processed_data_dir: outputs/processed
+  outputs_dir: outputs
+
+study:
+  crs: EPSG:4326
+  start_date: "2021-07-01"
+  end_date: "2021-09-30"
+  grid_resolution_m: 100
+  target_variable: burned_front_t_plus_1
+
+gee:
+  project_id: "your-ee-project-id"
+  aoi_backend: "geojson"
+  earth_engine_asset_id: "users/username/Dixie_Fire_AOI"
+  geojson_property_name: "name"
+  export_static_layers: true
+  export_time_series: true
+
+ca:
+  base_probability: 0.25
+  temp_sensitivity: 0.005
+  vpd_beta: 0.02
+  rh_beta: 0.01
+  tp_beta: 2.0
+  use_slope: true
+  use_fuel: true
+  use_barriers: true
+
+mas:
+  enabled: true
+  drone_count: 4
+  sensing_radius_px: 12
+  speed_px_per_step: 6
+  steps_per_day: 10
+  assignment_method: hungarian
+  assimilation_mode: binary_confirm_deny
+
+evaluation:
+  threshold_selection: validation_best_f1
+  primary_metrics:
+    - iou
+    - f1
+    - precision
+    - recall
+    - average_precision
+    - auc
