@@ -16,6 +16,9 @@ In the verified August evaluation window used in the manuscript, the hybrid CA+M
 
 The study uses a prepared retrospective geospatial dataset for the Dixie Fire case study on a common 100 m grid. The full prepared stack spans 1 July 2021 to 30 September 2021, while the quantitative comparison reported in the manuscript is restricted to the verified 5-day mid-fire window from 14 to 18 August 2021, with 14 August used for initialization and daily forecast skill reported for 15 to 18 August.
 
+**Reproducibility note:**
+The dataset assembly scripts and configuration files were frequently modified during the project. As a result, the assembly files you see in the repository may differ from those used to generate the results in the published article. Therefore, to exactly reproduce the results reported in the scientific project, you should use the provided dataset located in the `1_project_code/data` folder.
+
 The case-study stack combines the following data sources:
 
 * DEM, slope, and aspect from SRTM-derived terrain layers.
